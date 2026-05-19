@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías | Voces Ancestrales</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo: #ff0000;
+            --negro: #080808;
+            --gris: #121212;
+            --blanco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                              url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #000;
+            border-bottom: 4px solid var(--rojo);
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2.2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 25px; }
+        .menu a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+
+       
+        .contenedor { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+
+        .titulo-cat {
+            text-align: center;
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin-bottom: 50px;
+            text-shadow: 0 0 15px rgba(255,0,0,0.3);
+        }
+
+        .grid-categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta-cat {
+            background: var(--gris);
+            border: 1px solid #333;
+            padding: 40px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tarjeta-cat:hover {
+            border-color: var(--rojo);
+            transform: translateY(-10px);
+            background: #1a1a1a;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
+        }
+
+        .icon-cat {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: #000;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid var(--rojo);
+            transition: 0.4s;
+        }
+
+        .tarjeta-cat:hover .icon-cat {
+            background: var(--rojo);
+            transform: rotateY(360deg);
+        }
+
+        .tarjeta-cat h2 {
+            font-family: 'Oswald';
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+        }
+
+        .tarjeta-cat p {
+            color: #777;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 80px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="categorias.html" style="color: var(--rojo);">Categorías</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <h1 class="titulo-cat">BIBLIOTECA DE LO OCULTO</h1>
+        
+        <div class="grid-categorias">
+            
+            <a href="cat-mexico.html" class="tarjeta-cat">
+                <div class="icon-cat">🇲🇽</div>
+                <h2>Leyendas de México</h2>
+                <p>Nuestra historia bañada en sombras.</p>
+            </a>
+
+            <a href="cat-estados.html" class="tarjeta-cat">
+                <div class="icon-cat">📍</div>
+                <h2>Leyendas por Estado</h2>
+                <p>Misterios de cada rincón del país.</p>
+            </a>
+
+            <a href="cat-mundo.html" class="tarjeta-cat">
+                <div class="icon-cat">🌍</div>
+                <h2>Mitos del Mundo</h2>
+                <p>Creencias ancestrales globales.</p>
+            </a>
+
+            <a href="cat-criaturas.html" class="tarjeta-cat">
+                <div class="icon-cat">👺</div>
+                <h2>Criaturas Místicas</h2>
+                <p>Seres que habitan en la oscuridad.</p>
+            </a>
+
+            <a href="cat-brujeria.html" class="tarjeta-cat">
+                <div class="icon-cat">🔮</div>
+                <h2>Relatos de Brujería</h2>
+                <p>Hechizos, aquelarres y artes oscuras.</p>
+            </a>
+
+            <a href="cat-semanales.html" class="tarjeta-cat">
+                <div class="icon-cat">⏳</div>
+                <h2>Relatos Semanales</h2>
+                <p>Lo más nuevo del archivo.</p>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Selecciona tu camino bajo tu propio riesgo.</p>
+    </footer>
+
+</body>
+</html>

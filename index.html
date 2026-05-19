@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="Voces Ancestrales: El archivo digital más completo de mitos, leyendas de México, relatos de brujería y sucesos sobrenaturales.">
+    <meta name="keywords" content="leyendas de mexico, mitos del mundo, brujeria, nahuales, historias de terror, sucesos sobrenaturales">
+    <meta name="author" content="Luz Samanta Delgado Martinez">
+    <link rel="canonical" href="https://voces-ancestrales.netlify.app/">
+
+    <meta property="og:title" content="Voces Ancestrales | Blog de Leyendas">
+    <meta property="og:description" content="Explora los relatos más oscuros y antiguos de nuestra cultura.">
+    <meta property="og:image" content="1879.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOCES ANCESTRALES | Inicio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo-brillante: #ff0000;
+            --rojo-oscuro: #660000;
+            --rojo-sangre: #8b0000;
+            --negro: #080808;
+            --gris-oscurisimo: #121212;
+            --gris-claro: #cccccc;
+            --blanco: #ffffff;
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), 
+                              url('https://images.unsplash.com/photo-1500534311919-30d58841b2e7?q=80&w=1400');
+            background-attachment: fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 4px solid var(--rojo-brillante);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .logo { 
+            font-family: 'Permanent Marker', cursive; 
+            font-size: 2.2rem; 
+        }
+        .logo span { 
+            color: var(--rojo-brillante); 
+            text-shadow: 0 0 10px var(--rojo-brillante); 
+        }
+
+        .menu { 
+            display: flex; 
+            list-style: none; 
+            gap: 25px; 
+        }
+        .menu a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .menu a:hover { 
+            color: var(--rojo-brillante); 
+        }
+
+        .hero {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 { 
+            font-family: 'Metal Mania', cursive; 
+            font-size: 5.5rem; 
+            color: var(--rojo-brillante); 
+            margin-bottom: 10px; 
+            text-shadow: 5px 5px 15px black;
+            z-index: 10;
+            cursor: crosshair;
+            position: relative;
+        }
+        .hero p { 
+            font-size: 1.2rem; 
+            letter-spacing: 4px; 
+            color: var(--gris-claro); 
+            text-transform: uppercase; 
+            z-index: 10;
+        }
+
+        .mancha-sangre {
+            position: absolute;
+            background-color: var(--rojo-sangre);
+            border-radius: 50%;
+            filter: blur(2px);
+            z-index: 5;
+            pointer-events: none;
+            animation: expandirYDesvanecer 1.5s ease-out forwards;
+            box-shadow: 0 0 10px var(--rojo-sangre);
+        }
+
+        @keyframes expandirYDesvanecer {
+            0% { transform: scale(0.1) translateY(0); opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { transform: scale(1.5) translateY(20px); opacity: 0; }
+        }
+
+        .contenedor { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+
+        .titulo-seccion {
+            font-family: 'Metal Mania', cursive;
+            font-size: 3rem;
+            color: var(--rojo-brillante);
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .grid-articulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+
+        .card {
+            background: var(--gris-oscurisimo);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: 0.4s;
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--rojo-brillante); 
+            box-shadow: 0 10px 30px rgba(255,0,0,0.2); 
+        }
+        .card-img { 
+            height: 220px; 
+            background-size: cover; 
+            background-position: center; 
+            filter: grayscale(50%); 
+            transition: 0.4s; 
+        }
+        .card:hover .card-img { 
+            filter: grayscale(0%); 
+        }
+        .card-body { 
+            padding: 25px; 
+        }
+        .card-body h3 { 
+            color: var(--rojo-brillante); 
+            margin-bottom: 12px; 
+            font-size: 1.8rem; 
+            font-family: 'Oswald', sans-serif; 
+        }
+        .btn-leer { 
+            color: var(--blanco); 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-left: 3px solid var(--rojo-brillante); 
+            padding-left: 10px; 
+            transition: 0.3s; 
+        }
+        .btn-leer:hover { 
+            letter-spacing: 1px; 
+            color: var(--rojo-brillante); 
+        }
+
+        .grid-categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-bottom: 100px;
+        }
+
+        .cat-item {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 30px 15px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.4s ease;
+        }
+
+        .cat-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--rojo-brillante);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            font-size: 2.5rem;
+            transition: 0.5s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1);
+        }
+
+        .cat-item:hover { 
+            background: var(--gris-oscurisimo); 
+            border-color: var(--rojo-brillante); 
+            transform: scale(1.05); 
+        }
+        .cat-item:hover .cat-circle { 
+            transform: rotateY(360deg); 
+            background: var(--rojo-brillante); 
+            box-shadow: 0 0 25px var(--rojo-brillante); 
+        }
+        .cat-item span { 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 1rem; 
+            display: block; 
+            line-height: 1.2; 
+        }
+
+        .aportaciones-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1510002789148-4e64226bdfac?q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid var(--rojo-brillante);
+            margin-bottom: 100px;
+        }
+
+        .btn-aportar {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 18px 45px;
+            background: var(--rojo-brillante);
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 0 0 20px var(--rojo-brillante);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-aportar:hover { 
+            background: white; 
+            color: black; 
+            transform: translateY(-5px); 
+        }
+
+        footer {
+            background: #000;
+            padding: 80px 8% 30px;
+            border-top: 4px solid var(--rojo-brillante);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about h2 { 
+            font-family: 'Permanent Marker', cursive; 
+            color: var(--rojo-brillante); 
+            font-size: 2.5rem; 
+            margin-bottom: 20px; 
+        }
+        .footer-links h3 { 
+            text-transform: uppercase; 
+            border-bottom: 2px solid var(--rojo-brillante); 
+            display: inline-block; 
+            margin-bottom: 20px; 
+        }
+        .footer-links ul { 
+            list-style: none; 
+        }
+        .footer-links li { 
+            margin-bottom: 12px; 
+        }
+        .footer-links a { 
+            color: var(--gris-claro); 
+            text-decoration: none; 
+            transition: 0.3s; 
+        }
+        .footer-links a:hover { 
+            color: var(--rojo-brillante); 
+            padding-left: 10px; 
+        }
+
+        .copyright { 
+            text-align: center; 
+            color: #555; 
+            font-size: 0.9rem; 
+            padding-top: 30px; 
+            border-top: 1px solid #111; 
+        }
+
+        .spooky-modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .spooky-modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .spooky-modal {
+            background: #0d0d0d;
+            border: 3px solid var(--rojo-brillante);
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 35px 25px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.8) rotate(-3deg);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .spooky-modal-overlay.active .spooky-modal {
+            transform: scale(1) rotate(0deg);
+        }
+        .spooky-modal h3 {
+            font-family: 'Metal Mania', cursive;
+            font-size: 2.3rem;
+            color: var(--rojo-brillante);
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+        }
+        .spooky-modal p {
+            color: var(--gris-claro);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+        .spooky-modal-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .spooky-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            transition: 0.3s;
+        }
+        .spooky-btn-confirm {
+            background: var(--rojo-brillante);
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+        .spooky-btn-confirm:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 25px white;
+        }
+        .spooky-btn-cancel {
+            background: #1a1a1a;
+            color: var(--gris-claro);
+            border: 1px solid #333;
+        }
+        .spooky-btn-cancel:hover {
+            background: #252525;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VOCES <span>ANCESTRALES</span></div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="categorias.html">Categorías</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+            <li><a href="sobre-nosotros.html">Sobre el Blog</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="hero-sangriento">
+        <h1 id="titulo-principal" onmousemove="crearMancha(event)">VOCES ANCESTRALES</h1>
+        <p>Donde cada historia cobra vida</p>
+    </header>
+
+    <div class="contenedor">
+        
+        <h2 class="titulo-seccion">Artículos Destacados</h2>
+        <div class="grid-articulos">
+            <article class="card">
+                <div class="card-img" style="background-image: url('payaso.jpg');"></div>
+                <div class="card-body">
+                    <h3>El Payaso De La Colonia Madero</h3>
+                    <p>El payaso aparece en calles solitarias o cerca de parques abandonados, sosteniendo globos rojos o juguetes viejos. Quienes dicen haberlo visto afirman que desaparece de repente, dejando tras de sí un eco de risas que hiela la sangre.</p>
+                    <a href="articulos.html" class="btn-leer">LEER RELATO →</a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img" style="background-image: url('naica.jpg');"></div>
+                <div class="card-body">
+                    <h3>Las Brujas De Naica</h3>
+                    <p>En el estado de Chihuahua, cerca del poblado de Naica, se cuenta una de las historias más aterradoras del norte de México.</p>
+                    <p>En esa región, conocida por sus minas de cristal y su ambiente desértico, se dice que durante las noches sin luna aparecen mujeres misteriosas que sobrevuelan el cielo convertidas en bolas de fuego.</p>
+                    <a href="articulos.html" class="btn-leer">LEER RELATO →</a>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="titulo-seccion">Explorar Categorías</h2>
+        <div class="grid-categorias">
+            <a href="cat-mexico.html" class="cat-item">
+                <div class="cat-circle">🇲🇽</div>
+                <span>Leyendas de México</span>
+            </a>
+            <a href="cat-estados.html" class="cat-item">
+                <div class="cat-circle">📍</div>
+                <span>Leyendas por Estado</span>
+            </a>
+            <a href="cat-mundo.html" class="cat-item">
+                <div class="cat-circle">🌍</div>
+                <span>Mitos del Mundo</span>
+            </a>
+            <a href="cat-criaturas.html" class="cat-item">
+                <div class="cat-circle">👺</div>
+                <span>Criaturas Místicas</span>
+            </a>
+            <a href="cat-brujeria.html" class="cat-item">
+                <div class="cat-circle">🔮</div>
+                <span>Relatos de Brujería</span>
+            </a>
+            <a href="cat-semanales.html" class="cat-item">
+                <div class="cat-circle">⏳</div>
+                <span>Relatos Semanales</span>
+            </a>
+        </div>
+
+        <section class="aportaciones-banner">
+            <h2 style="font-size: 3rem; font-family: 'Metal Mania'; margin-bottom: 15px;">¿TIENES UNA HISTORIA?</h2>
+            <p>El archivo de lo prohibido siempre tiene espacio para un nuevo relato. Cuéntanos tu experiencia.</p>
+            <button type="button" class="btn-aportar" id="btn-misterio">ENVIAR MI LEYENDA</button>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h2>VOCES ANCESTRALES</h2>
+                <p>Somos los guardianes de la tradición oral y el folklore oscuro. Investigamos y recopilamos los mitos que la ciencia no puede explicar.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="index.html">Página Principal</a></li>
+                    <li><a href="articulos.html">Archivo de Historias</a></li>
+                    <li><a href="aportaciones.html">Colabora con nosotros</a></li>
+                    <li><a href="sobre-nosotros.html">Nuestra Historia</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Misterios</h3>
+                <p>No camines solo por el bosque de la información. Únete a nuestra comunidad.</p>
+                <div style="font-size: 2rem; margin-top: 15px; letter-spacing: 15px;">🕯️ 📖 🌑</div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Voces Ancestrales | Blog de Mitos y Leyendas.
+        </div>
+    </footer>
+
+    <div class="spooky-modal-overlay" id="spookyOverlay">
+        <div class="spooky-modal">
+            <h3>¿Proceder con el pacto?</h3>
+            <p>¿Estás seguro? Tu historia quedará grabada en sangre...</p>
+            <div class="spooky-modal-btns">
+                <button type="button" class="spooky-btn spooky-btn-confirm" id="btnSip">SÍ, PROCEDER</button>
+                <button type="button" class="spooky-btn spooky-btn-cancel" id="btnNop">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hero = document.getElementById('hero-sangriento');
+
+        function crearMancha(e) {
+            const mancha = document.createElement('div');
+            mancha.classList.add('mancha-sangre');
+            
+                   const tamaño = Math.random() * 30 + 10; 
+            mancha.style.width = tamaño + 'px';
+            mancha.style.height = (tamaño + (Math.random() * 20)) + 'px'; // Más vertical, goteo natural
+
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left - (tamaño / 2);
+            const y = e.clientY - rect.top - (tamaño / 2);
+
+            mancha.style.left = x + 'px';
+            mancha.style.top = y + 'px';
+
+            // Rotación aleatoria para que cada gota tenga su propia dirección física
+            mancha.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+            hero.appendChild(mancha);
+
+
+            setTimeout(() => {
+                mancha.remove();
+            }, 1500);
+        }
+
+        // Lógica de interacción limpia para el Modal Gótico sin usar confirm()
+        const overlay = document.getElementById('spookyOverlay');
+        const btnAportar = document.getElementById('btn-misterio');
+        const btnSip = document.getElementById('btnSip');
+        const btnNop = document.getElementById('btnNop');
+
+         btnAportar.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        btnNop.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        btnSip.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            window.location.href = "aportaciones.html";
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas de México | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rojo: #ff0000;
+            --negro: #080808;
+            --gris: #121212;
+            --blanco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+        }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .contenedor { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+        .titulo-cat {
+            text-align: center; font-family: 'Metal Mania'; font-size: 3.5rem;
+            color: var(--rojo); margin-bottom: 10px; text-transform: uppercase;
+        }
+
+        .subtitulo { text-align: center; color: #777; margin-bottom: 50px; letter-spacing: 3px; }
+
+        
+        .grid-relatos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .relato-card {
+            background: var(--gris);
+            border: 1px solid #222;
+            overflow: hidden;
+            transition: 0.4s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .relato-card:hover { border-color: var(--rojo); transform: translateY(-10px); }
+
+        
+        .img-link { text-decoration: none; display: block; overflow: hidden; }
+
+        .relato-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(80%);
+            transition: 0.6s;
+        }
+
+        .relato-card:hover .relato-img { filter: grayscale(0%); transform: scale(1.1); }
+
+        .relato-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+        .relato-info h3 {
+            font-family: 'Metal Mania'; color: var(--rojo);
+            font-size: 1.8rem; margin-bottom: 10px;
+        }
+        
+        
+        .relato-info a { text-decoration: none; }
+
+        .relato-info p { color: #ccc; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+
+        .btn-leer {
+            margin-top: auto;
+            display: inline-block;
+            color: var(--rojo);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--rojo);
+            padding: 8px 15px;
+            text-align: center;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .btn-leer:hover { background: var(--rojo); color: white; }
+
+        .btn-volver {
+            display: inline-block; margin-top: 50px; color: var(--blanco);
+            text-decoration: none; border: 1px solid var(--rojo);
+            padding: 10px 25px; font-weight: bold; transition: 0.3s;
+        }
+
+        .btn-volver:hover { background: var(--rojo); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+    </nav>
+
+    <div class="contenedor">
+        <h1 class="titulo-cat">🇲🇽 Leyendas de México</h1>
+        <p class="subtitulo">EL FOLKLORE QUE CORRE POR NUESTRAS VENAS</p>
+
+        <div class="grid-relatos">
+            
+            <div class="relato-card">
+                <a href="lectura-llorona.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('llorona.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-llorona.html"><h3>La Llorona</h3></a>
+                    <p>El lamento eterno de una madre que busca a sus hijos por las orillas de los ríos. Una historia que ha aterrorizado a generaciones desde la colonia.</p>
+                    <a href="lectura-llorona.html" class="btn-leer">Leer Historia Completa →</a>
+                </div>
+            </div>
+
+            <div class="relato-card">
+                <a href="lectura-charro.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('charro.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-charro.html"><h3>El Charro Negro</h3></a>
+                    <p>Un hombre alto de traje elegante y ojos de fuego que cobra las deudas de aquellos que ambicionan el dinero fácil en las noches de luna llena.</p>
+                    <a href="lectura-charro.html" class="btn-leer">Leer Historia Completa →</a>
+                </div>
+            </div>
+
+            <div class="relato-card">
+                <a href="lectura-beso.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('cabe.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-beso.html"><h3>El Callejón del Beso</h3></a>
+                    <p>La trágica historia de amor en Guanajuato que terminó en sangre y una maldición para quienes no se besen en el tercer escalón.</p>
+                    <a href="lectura-beso.html" class="btn-leer">Leer Historia Completa →</a>
+                </div>
+            </div>
+
+            <div class="relato-card">
+                <a href="lectura-muñecas.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('ismu.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-muñecas.html"><h3>La Isla de las Muñecas</h3></a>
+                    <p>En Xochimilco, miles de muñecas rotas cuelgan de los árboles para calmar el espíritu de una niña que se ahogó en los canales.</p>
+                    <a href="lectura-muñecas.html" class="btn-leer">Leer Historia Completa →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <center><a href="index.html" class="btn-volver">← VOLVER AL PORTAL</a></center>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Historias de la Tierra del Nopal</p>
+    </footer>
+
+</body>
+</html>

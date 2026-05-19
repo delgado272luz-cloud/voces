@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criaturas Místicas | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif; 
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png'); 
+        }
+
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo); 
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+        .contenedor { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+        .titulo-cat { 
+            text-align: center; font-family: 'Metal Mania'; font-size: 3.5rem; 
+            color: var(--rojo); margin-bottom: 10px; text-transform: uppercase; 
+        }
+
+        .subtitulo { text-align: center; color: #777; margin-bottom: 50px; letter-spacing: 3px; text-transform: uppercase; }
+
+        .grid-relatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .relato-card { 
+            background: var(--gris); border: 1px solid #222; 
+            overflow: hidden; transition: 0.4s; 
+            display: flex; flex-direction: column;
+        }
+
+        .relato-card:hover { 
+            border-color: var(--rojo); 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2); 
+        }
+
+        .img-link { text-decoration: none; display: block; overflow: hidden; }
+
+        .relato-img { 
+            height: 250px; background-size: cover; background-position: center; 
+            filter: grayscale(80%); transition: 0.6s ease; 
+        }
+
+        .relato-card:hover .relato-img { filter: grayscale(0%); transform: scale(1.1); }
+
+        .relato-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+        .relato-info a { text-decoration: none; }
+
+        .relato-info h3 { 
+            font-family: 'Metal Mania'; color: var(--rojo); 
+            font-size: 1.8rem; margin-bottom: 15px; 
+        }
+
+        .relato-info p { 
+            color: #ccc; font-size: 0.95rem; line-height: 1.6; 
+            text-align: justify; margin-bottom: 25px;
+        }
+
+        .btn-leer {
+            margin-top: auto;
+            display: inline-block;
+            color: var(--rojo);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--rojo);
+            padding: 10px;
+            text-align: center;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .btn-leer:hover { background: var(--rojo); color: white; }
+
+        .btn-volver { 
+            display: inline-block; margin-top: 50px; color: var(--blanco); 
+            text-decoration: none; border: 1px solid var(--rojo); 
+            padding: 12px 30px; font-weight: bold; transition: 0.3s; 
+            text-transform: uppercase; 
+        }
+
+        .btn-volver:hover { background: var(--rojo); box-shadow: 0 0 15px var(--rojo); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; margin-top: 60px; font-size: 0.9rem; color: #555; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+    <div class="contenedor">
+        <h1 class="titulo-cat">👺 Criaturas Místicas</h1>
+        <p class="subtitulo">Bestiario de lo inexplicable</p>
+        <div class="grid-relatos">
+            
+            <article class="relato-card">
+                <a href="lectura-nahual.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('nahual.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-nahual.html"><h3>El Nahual</h3></a>
+                    <p>Antiguos chamanes que poseen el don de la transmutación. En las noches cerradas, se dice que abandonan su forma humana para convertirse en bestias que custodian los montes o aterrorizan a los incrédulos.</p>
+                    <a href="lectura-nahual.html" class="btn-leer">Explorar Bestiario →</a>
+                </div>
+            </article>
+
+            <article class="relato-card">
+                <a href="lectura-aluxes.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('aluxe.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-aluxes.html"><h3>Los Aluxes</h3></a>
+                    <p>Pequeños guardianes de la selva maya. Construidos de barro y dotados de vida mediante rituales, estos seres protegen las milpas. Si no recibes sus ofrendas, pueden causar enfermedades.</p>
+                    <a href="lectura-aluxes.html" class="btn-leer">Explorar Bestiario →</a>
+                </div>
+            </article>
+
+        </div>
+        <center><a href="index.html" class="btn-volver">← VOLVER AL PORTAL</a></center>
+    </div>
+    <footer><p>&copy; 2026 Voces Ancestrales | Registro de Seres Innaturales</p></footer>
+</body>
+</html>

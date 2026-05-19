@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendas por Estado | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif; 
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png'); 
+        }
+
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo); 
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .contenedor { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+        .titulo-cat { 
+            text-align: center; font-family: 'Metal Mania'; font-size: 3.5rem; 
+            color: var(--rojo); margin-bottom: 10px; text-transform: uppercase;
+        }
+
+        .subtitulo { text-align: center; color: #777; margin-bottom: 50px; letter-spacing: 3px; }
+
+        .grid-relatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .relato-card { 
+            background: var(--gris); border: 1px solid #222; 
+            overflow: hidden; transition: 0.4s; 
+            display: flex; flex-direction: column;
+        }
+
+        .relato-card:hover { 
+            border-color: var(--rojo); 
+            transform: translateY(-10px); 
+            box-shadow: 0 10px 20px rgba(255,0,0,0.1);
+        }
+
+        /* Enlaces para las imágenes */
+        .img-link { text-decoration: none; display: block; overflow: hidden; }
+
+        .relato-img { 
+            height: 250px; background-size: cover; background-position: center; 
+            filter: grayscale(80%); transition: 0.6s ease; 
+        }
+
+        .relato-card:hover .relato-img { filter: grayscale(0%); transform: scale(1.1); }
+
+        .relato-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+
+        
+        .relato-info a { text-decoration: none; }
+
+        .relato-info h3 { font-family: 'Metal Mania'; color: var(--rojo); font-size: 1.8rem; margin-bottom: 10px; }
+
+        .relato-info p { color: #ccc; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+
+        .btn-leer {
+            margin-top: auto;
+            display: inline-block;
+            color: var(--rojo);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--rojo);
+            padding: 8px 15px;
+            text-align: center;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .btn-leer:hover { background: var(--rojo); color: white; }
+
+        .btn-volver { 
+            display: inline-block; margin-top: 50px; color: var(--blanco); 
+            text-decoration: none; border: 1px solid var(--rojo); 
+            padding: 10px 25px; font-weight: bold; transition: 0.3s; 
+        }
+
+        .btn-volver:hover { background: var(--rojo); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; margin-top: 60px; color: #444; }
+    </style>
+</head>
+<body>
+
+    <nav><a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a></nav>
+
+    <div class="contenedor">
+        <h1 class="titulo-cat">📍 Leyendas por Estado</h1>
+        <p class="subtitulo">MISTERIOS OCULTOS EN CADA PROVINCIA</p>
+
+        <div class="grid-relatos">
+            
+            <div class="relato-card">
+                <a href="lectura-pascualita.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('pascualita.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-pascualita.html"><h3>Chihuahua: La Pascualita</h3></a>
+                    <p>El maniquí que muchos juran es el cadáver embalsamado de la hija de la dueña de la tienda de novias.</p>
+                    <a href="lectura-pascualita.html" class="btn-leer">Abrir Expediente →</a>
+                </div>
+            </div>
+
+            <div class="relato-card">
+                <a href="lectura-zacatecana.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('zacatecana.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-zacatecana.html"><h3>Querétaro: La Zacatecana</h3></a>
+                    <p>Una mujer que mandó asesinar a su esposo para luego ser víctima de su propio pecado en su mansión.</p>
+                    <a href="lectura-zacatecana.html" class="btn-leer">Abrir Expediente →</a>
+                </div>
+            </div>
+
+            <div class="relato-card">
+                <a href="lectura-fuente-muñecos.html" class="img-link">
+                    <div class="relato-img" style="background-image: url('fumu.jpg');"></div>
+                </a>
+                <div class="relato-info">
+                    <a href="lectura-fuente-muñecos.html"><h3>Puebla: La Fuente de los Muñecos</h3></a>
+                    <p>Dos hermanos que desaparecieron y cuyas estatuas cobran vida para jugar en el barrio de Xonaca.</p>
+                    <a href="lectura-fuente-muñecos.html" class="btn-leer">Abrir Expediente →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <center><a href="index.html" class="btn-volver">← VOLVER AL PORTAL</a></center>
+    </div>
+
+    <footer>
+        &copy; 2026 Voces Ancestrales | El rastro de los estados.
+    </footer>
+
+</body>
+</html>

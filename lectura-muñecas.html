@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Isla de las Muñecas | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('https://www.transparenttextures.com/patterns/dark-wood.png');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(18, 18, 18, 0.9);
+            min-height: 100vh;
+            border-left: 1px solid #2a2a2a;
+            border-right: 1px solid #2a2a2a;
+        }
+
+       
+        .img-full {
+            width: 100%;
+            height: 450px;
+            background: url('ismu.jpg') center/cover;
+            border-bottom: 5px solid #3e3e3e;
+            margin-bottom: 30px;
+            filter: grayscale(40%) contrast(1.1);
+        }
+
+        h1 {
+            font-family: 'Metal Mania';
+            color: var(--rojo);
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            font-size: 0.85rem;
+        }
+
+        .texto-relato {
+            line-height: 1.9;
+            font-size: 1.25rem;
+            text-align: justify;
+            color: #bbb;
+            white-space: pre-line;
+            padding: 0 20px;
+        }
+
+        .dato-perturbador {
+            margin: 40px 0;
+            padding: 25px;
+            border: 1px solid #333;
+            background: #050505;
+            color: #888;
+            font-size: 1rem;
+            border-left: 5px solid var(--rojo);
+        }
+
+        .dato-perturbador strong { color: var(--rojo); }
+
+        .nav-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid var(--rojo);
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #222;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="img-full"></div>
+
+        <h1>LA ISLA DE LAS MUÑECAS</h1>
+        <p class="subtitulo">Xochimilco: El Jardín de las Almas Atrapadas</p>
+
+        <div class="texto-relato">
+            En los canales de Xochimilco, al sur de la Ciudad de México, se encuentra un lugar que desafía la tranquilidad de sus aguas: la Isla de las Muñecas. Miles de figuras de plástico, desmembradas y cubiertas de moho, cuelgan de los árboles, observando con cuencas vacías a quienes se atreven a pasar.
+
+            La historia comenzó con Julián Santana Barrera, el ermitaño que custodiaba la chinampa. Se dice que Julián encontró el cuerpo de una niña que se había ahogado en el canal. Poco después, empezó a escuchar lamentos y pasos en la oscuridad. Para calmar el espíritu de la pequeña, Julián colgó una muñeca que encontró en el agua.
+
+            A lo largo de 50 años, recolectó miles más. Algunas decapitadas, otras sin extremidades, Julián las veía como protectores contra las fuerzas del mal que habitaban el canal. La tragedia se volvió leyenda en el año 2001, cuando Don Julián fue encontrado muerto exactamente en el mismo lugar donde, décadas atrás, él decía haber visto a la niña ahogada.
+        </div>
+
+        <div class="dato-perturbador">
+            <strong>REGISTRO:</strong> Los visitantes actuales aseguran que, al caminar por la isla, se siente una mirada constante y que algunas muñecas parecen mover los ojos o susurrar cuando el viento sopla entre las ramas.
+        </div>
+
+        <div class="nav-btns">
+            <a href="index.html" class="btn">Inicio</a>
+            <a href="cat-mexico.html" class="btn">Volver a México</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Voces Ancestrales | El susurro de los canales.
+        </footer>
+    </div>
+
+</body>
+</html>

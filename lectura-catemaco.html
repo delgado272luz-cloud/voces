@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquelarre de Catemaco | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            line-height: 1.8;
+        }
+
+       
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+  
+        .contenedor-lectura {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--gris);
+            border: 1px solid #222;
+        }
+
+        .header-relato { text-align: center; margin-bottom: 30px; }
+        .categoria-tag { color: var(--rojo); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: bold; }
+        
+        h1 {
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .img-relato-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .img-relato-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        .img-relato-box img:hover { filter: grayscale(0%); }
+
+        .cuerpo-texto {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .cuerpo-texto p { margin-bottom: 20px; }
+
+        .cita-destacada {
+            font-family: 'Metal Mania';
+            font-size: 1.6rem;
+            color: var(--rojo);
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
+        }
+
+        .controles {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            color: var(--blanco);
+            text-decoration: none;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-volver:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-lectura">
+        <div class="header-relato">
+            <span class="categoria-tag">Ocultismo | Brujería</span>
+            <h1>AQUELARRE DE CATEMACO</h1>
+        </div>
+
+        <div class="img-relato-box">
+            <img src="catemaco.jpg" alt="Ritual en Catemaco">
+        </div>
+
+        <div class="cuerpo-texto">
+            <p>En el corazón de la selva veracruzana, a orillas de una laguna mística, se encuentra Catemaco, la capital mundial de la brujería. Cada primer viernes de marzo, la energía de este lugar se transforma para recibir el "Aquelarre", una congregación masiva de brujos blancos y negros que se reúnen en el Cerro del Mono para realizar rituales de purificación, pactos y limpias espirituales.</p>
+
+            <p>La tradición cuenta que estas tierras son un punto de convergencia magnética donde las fuerzas de la naturaleza y el inframundo se tocan. Durante la noche del Aquelarre, el aire se llena de olor a copal, hierbabuena y aguardiente, mientras las fogatas iluminan los rostros de aquellos que buscan poder, salud o la resolución de deudas de sangre.</p>
+
+            <div class="cita-destacada">
+                "DONDE EL AGUA SE JUNTA CON LA SELVA, LAS SOMBRAS APRENDEN A HABLAR EL IDIOMA DE LOS HOMBRES."
+            </div>
+
+            <p>El punto más crítico de la celebración ocurre en la oscuridad profunda del bosque, donde los "Brujos Mayores" presiden misas negras y ceremonias secretas. Se dice que en estos aquelarres se invoca a entidades antiguas para renovar los dones de adivinación y curación. Los escépticos lo llaman folclore, pero quienes han caminado por Catemaco en esa fecha aseguran que el peso del aire cambia y que los susurros entre los árboles no pertenecen a ningún viento conocido.</p>
+
+            <p>Para el visitante común, Catemaco ofrece sanación; pero para el iniciado, es el lugar donde se entrega el alma a cambio de conocimiento oculto. No es solo una fiesta, es el recordatorio de que en México, la magia antigua nunca murió, solo aprendió a esconderse entre los juncos de la laguna.</p>
+        </div>
+
+        <div class="controles">
+            <a href="cat-brujeria.html" class="btn-volver">← VOLVER A BRUJERÍA</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Tierra de Brujos</p>
+    </footer>
+
+</body>
+</html>

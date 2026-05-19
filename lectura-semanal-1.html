@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anónimo desde Oaxaca | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            line-height: 1.8;
+        }
+
+      
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+       
+        .contenedor-lectura {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--gris);
+            border: 1px solid #222;
+        }
+
+        .header-relato { text-align: center; margin-bottom: 30px; }
+        .categoria-tag { color: var(--rojo); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: bold; }
+        
+        h1 {
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .img-relato-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .img-relato-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        .img-relato-box img:hover { filter: grayscale(0%); }
+
+        .cuerpo-texto {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .cuerpo-texto p { margin-bottom: 20px; }
+
+        .cita-destacada {
+            font-family: 'Metal Mania';
+            font-size: 1.6rem;
+            color: var(--rojo);
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
+        }
+
+        .controles {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            color: var(--blanco);
+            text-decoration: none;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-volver:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-lectura">
+        <div class="header-relato">
+            <span class="categoria-tag">Relato de la Semana | Oaxaca</span>
+            <h1>ANÓNIMO DESDE OAXACA</h1>
+        </div>
+
+        <div class="img-relato-box">
+            <img src="oaxaca-misterio.jpg" alt="Callejón antiguo de Oaxaca">
+        </div>
+
+        <div class="cuerpo-texto">
+            <p>Este relato nos llega desde las calles empedradas de Oaxaca, donde el tiempo parece detenerse bajo el sol del mediodía. Un seguidor de nuestra comunidad, que prefiere mantenerse en el anonimato, nos comparte una experiencia que vivió mientras recorría los senderos cercanos a la Sierra Sur, en una zona donde la señal del celular desaparece y el silencio se vuelve absoluto.</p>
+
+            <p>Cuenta que, durante una caminata nocturna, divisó una serie de luces pequeñas que flotaban sobre la maleza. Al principio pensó que eran luciérnagas, pero el movimiento era demasiado rítmico, casi coordinado. Al acercarse, las luces se apagaron de golpe y fue entonces cuando escuchó un silbido largo y agudo, similar al de un ave, pero con una cadencia humana que le erizó la piel.</p>
+
+            <div class="cita-destacada">
+                "HAY LUGARES DONDE LA TIERRA TIENE MEMORIA Y NO LE GUSTA QUE LOS EXTRAÑOS CAMINEN SOBRE SUS SECRETOS."
+            </div>
+
+            <p>Sin mirar atrás, el autor del relato regresó al pueblo más cercano. Al contarle a los ancianos del lugar, estos simplemente asintieron sin sorpresa, mencionando que en esas colinas habitan los "dueños del cerro", entidades que protegen los antiguos caminos y que no siempre son amigables con quienes no piden permiso para pasar. </p>
+
+            <p>Desde aquel día, nuestro colaborador anónimo asegura que no vuelve a caminar por la sierra sin llevar consigo una ofrenda o, al menos, un respeto profundo por lo que no puede explicar. Oaxaca no solo es cultura y color; es también un territorio donde lo sobrenatural es parte de la vida cotidiana.</p>
+        </div>
+
+        <div class="controles">
+            <a href="cat-semanales.html" class="btn-volver">← VOLVER A SEMANALES</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Crónicas de Nuestra Tierra</p>
+    </footer>
+
+</body>
+</html>

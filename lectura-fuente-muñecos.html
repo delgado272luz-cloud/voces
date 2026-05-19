@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fuente de los Muñecos | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            line-height: 1.8;
+        }
+
+        
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+        
+        .contenedor-lectura {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--gris);
+            border: 1px solid #222;
+        }
+
+        .header-relato { text-align: center; margin-bottom: 30px; }
+        .categoria-tag { color: var(--rojo); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: bold; }
+        
+        h1 {
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .img-relato-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .img-relato-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        .img-relato-box img:hover { filter: grayscale(0%); }
+
+        .cuerpo-texto {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .cuerpo-texto p { margin-bottom: 20px; }
+
+        .cita-destacada {
+            font-family: 'Metal Mania';
+            font-size: 1.6rem;
+            color: var(--rojo);
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
+        }
+
+        
+        .controles {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            color: var(--blanco);
+            text-decoration: none;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-volver:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-lectura">
+        <div class="header-relato">
+            <span class="categoria-tag">Puebla | Leyendas de los Estados</span>
+            <h1>LA FUENTE DE LOS MUÑECOS</h1>
+        </div>
+
+        <div class="img-relato-box">
+            <img src="fumu.jpg" alt="La Fuente de los Muñecos en Puebla">
+        </div>
+
+        <div class="cuerpo-texto">
+            <p>En el antiguo barrio de Xonaca, en la ciudad de Puebla, se encuentra una fuente coronada por las figuras de dos niños: una niña con un vestido y un niño con overol. Aunque hoy parece una simple decoración, la historia detrás de estas estatuas es una de las más melancólicas que se cuentan en el estado.</p>
+
+            <p>Cuenta la leyenda que, durante la época del gobernador Maximino Ávila Camacho, vivían en la zona dos hermanos, hijos de un caballerango de la quinta. Los niños eran inseparables y solían caminar juntos hacia la escuela bajo la lluvia. Una tarde de tormenta, mientras intentaban cruzar la calle, desaparecieron sin dejar rastro cerca de un pozo de agua que solía desbordarse.</p>
+
+            <div class="cita-destacada">
+                "ESTÁTICOS BAJO EL SOL, PERO VIVOS CUANDO LA LUNA REINA EN EL BARRIO DE XONACA."
+            </div>
+
+            <p>A pesar de las intensas búsquedas de su padre y los vecinos, los cuerpos nunca fueron encontrados. Se dice que el gobernador, conmovido por la tragedia, ordenó construir la fuente justo en el lugar de la desaparición, colocando las dos figuras de azulejo en honor a los pequeños. Sin embargo, el misterio comenzó poco después de la inauguración.</p>
+
+            <p>Los vecinos del barrio aseguran que, durante las madrugadas, la fuente queda vacía. Se escuchan risas infantiles y el sonido de pies pequeños corriendo sobre el pavimento. Dicen que los muñecos cobran vida para jugar en las calles que no pudieron recorrer de adultos, regresando a sus pedestales antes de que raye el alba, con las rodillas raspadas y la ropa húmeda por el agua de la fuente.</p>
+        </div>
+
+        <div class="controles">
+            <a href="cat-estados.html" class="btn-volver">← VOLVER A ESTADOS</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Misterios Poblanos</p>
+    </footer>
+
+</body>
+</html>

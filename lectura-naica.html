@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Brujas de Naica | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--gris);
+            min-height: 100vh;
+            border-left: 1px solid #333;
+            border-right: 1px solid #333;
+            box-shadow: 0 0 50px rgba(255,0,0,0.05);
+        }
+
+        .img-full {
+            width: 100%;
+            height: 400px;
+            background: url('naica.jpg') center/cover;
+            border-bottom: 5px solid var(--rojo);
+            margin-bottom: 30px;
+            filter: brightness(0.7) contrast(1.3);
+        }
+
+        h1 {
+            font-family: 'Metal Mania';
+            color: var(--rojo);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .texto-relato {
+            line-height: 1.9;
+            font-size: 1.2rem;
+            text-align: justify;
+            color: #ddd;
+            white-space: pre-line;
+            padding: 0 10px;
+        }
+
+        .nota-informativa {
+            background: #000;
+            border-left: 4px solid var(--rojo);
+            padding: 20px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .nav-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid var(--rojo);
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 20px var(--rojo);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #444;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="img-full"></div>
+
+        <h1>LAS BRUJAS DE NAICA</h1>
+        <p class="subtitulo">Clasificación: Fenómeno de Bolas de Fuego</p>
+
+        <div class="texto-relato">
+            En el estado de Chihuahua, existe un pequeño poblado minero llamado Naica, mundialmente famoso por su "Cueva de los Cristales". Sin embargo, para los habitantes locales, la verdadera fama de Naica reside en lo que ocurre en el cielo después de las 10:30 de la noche.
+
+            Se cuenta que Naica es la capital mundial de las brujas. Según la tradición, estas mujeres tienen la capacidad de desprenderse de sus piernas y extremidades para transformarse en bolas de fuego que saltan de cerro en cerro. Los mineros que terminan sus turnos a altas horas de la noche relatan haber visto estas luces danzantes que parecen vigilar la entrada de las minas.
+
+            Lo más inquietante de la leyenda es que estas brujas buscan niñas para convertirlas en seguidoras de sus ritos. Los pobladores más antiguos recomiendan rezar y no mirar directamente a las luces, pues el calor que emanan no es físico, sino un fuego que quema el alma de quien las observa con curiosidad.
+        </div>
+
+        <div class="nota-informativa">
+            <strong>Dato curioso:</strong> Muchos investigadores de lo paranormal asocian este fenómeno con los depósitos de minerales de la zona, pero los testimonios de los lugareños insisten en que las luces muestran un comportamiento inteligente y acechante.
+        </div>
+
+        <div class="nav-btns">
+            <a href="index.html" class="btn">Inicio</a>
+            <a href="articulos.html" class="btn">Volver a Archivos</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Voces Ancestrales | Archivo de Mitos del Norte
+        </footer>
+    </div>
+
+</body>
+</html>

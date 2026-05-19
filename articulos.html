@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo de Historias | Voces Ancestrales</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo-brillante: #ff0000;
+            --negro: #080808;
+            --gris-oscuro: #1a1a1a;
+            --blanco: #ffffff;
+            --pergamino: #d4c4a8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                              url('ar.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            overflow-x: hidden; /* Evita que los globos creen scroll lateral */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #000;
+            border-bottom: 4px solid var(--rojo-brillante);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2.2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo-brillante); }
+
+        .menu { display: flex; list-style: none; gap: 25px; }
+        .menu a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .menu a:hover { color: var(--rojo-brillante); }
+
+        .contenedor { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+
+        .header-articulos { text-align: center; margin-bottom: 60px; border-bottom: 2px double var(--rojo-brillante); padding-bottom: 20px; }
+        .header-articulos h1 { font-family: 'Metal Mania'; font-size: 4rem; color: var(--rojo-brillante); }
+
+        .expediente {
+            background: var(--gris-oscuro);
+            margin-bottom: 60px;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 10px 10px 0px rgba(255, 0, 0, 0.1);
+            transition: 0.3s;
+            position: relative; /* Importante para las partículas */
+        }
+
+        .expediente:hover {
+            border-color: var(--rojo-brillante);
+            transform: scale(1.01);
+        }
+
+        .expediente-img {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 5px solid var(--rojo-brillante);
+            filter: sepia(0.5) contrast(1.2);
+            position: relative;
+            cursor: crosshair;
+        }
+
+        .expediente-body { padding: 40px; }
+
+        .sello-clasificado {
+            color: var(--rojo-brillante);
+            border: 3px solid var(--rojo-brillante);
+            display: inline-block;
+            padding: 5px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: rotate(-5deg);
+            margin-bottom: 20px;
+            font-family: 'Oswald';
+        }
+
+        .expediente-body h2 {
+            font-family: 'Metal Mania';
+            font-size: 2.5rem;
+            color: var(--blanco);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .expediente-body p {
+            color: var(--pergamino);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .btn-leer-mas {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: var(--rojo-brillante);
+            padding: 12px 30px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-leer-mas:hover { 
+            background: white; 
+            color: black; 
+            transform: translateY(-3px);
+        }
+
+        /* --- ESTILOS PARA LAS PARTÍCULAS JS --- */
+        .particula {
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+            font-size: 2rem;
+            animation: flotar 1.5s ease-out forwards;
+        }
+
+        @keyframes flotar {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(var(--x), var(--y)) scale(1.5); opacity: 0; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+            <li><a href="sobre-nosotros.html">Sobre el Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <header class="header-articulos">
+            <h1>EXPEDIENTES ABIERTOS</h1>
+            <p>ARCHIVO CONFIDENCIAL DE SUCESOS INEXPLICABLES</p>
+        </header>
+
+        <!-- Expediente 1: Payaso -->
+        <article class="expediente">
+            <div class="expediente-img efecto-payaso" style="background-image: url('payaso.jpg');"></div>
+            <div class="expediente-body">
+                <div class="sello-clasificado">AVISTAMIENTO LOCAL</div>
+                <h2>EL PAYASO DE LA COLONIA MADERO</h2>
+                <p>Informes recientes sugieren que la entidad conocida como "El Payaso Madero" no es solo un mito urbano...</p>
+                <a href="lectura-payaso.html" class="btn-leer-mas">ABRIR EXPEDIENTE COMPLETO →</a>
+            </div>
+        </article>
+
+        <!-- Expediente 2: Brujas -->
+        <article class="expediente">
+            <div class="expediente-img efecto-brujas" style="background-image: url('naica.jpg');"></div>
+            <div class="expediente-body">
+                <div class="sello-clasificado">FENÓMENO CIENTÍFICO</div>
+                <h2>LAS BRUJAS DE NAICA</h2>
+                <p>En el corazón de Chihuahua, las cuevas de Naica albergan cristales gigantes, pero en la superficie, el misterio es otro...</p>
+                <a href="lectura-naica.html" class="btn-leer-mas">ABRIR EXPEDIENTE COMPLETO →</a>
+            </div>
+        </article>
+
+        <!-- Expediente 3: Llorona -->
+        <article class="expediente">
+            <div class="expediente-img efecto-llorona" style="background-image: url('llorona.jpg');"></div>
+            <div class="expediente-body">
+                <div class="sello-clasificado">LEYENDA ETERNA</div>
+                <h2>LA LLORONA: EL LAMENTO DEL </h2>
+                <p>Más allá de ser un simple cuento para asustar niños, el registro del lamento de una mujer ha sido documentado...</p>
+                <a href="lectura-llorona.html" class="btn-leer-mas">ABRIR EXPEDIENTE COMPLETO →</a>
+            </div>
+        </article>
+
+        <center><a href="index.html" class="btn-inicio">← VOLVER AL PORTAL PRINCIPAL</a></center>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Registro de lo Inexplicable</p>
+    </footer>
+
+    <script>
+        function crearParticula(e, contenido) {
+            const container = e.target;
+            for (let i = 0; i < 8; i++) {
+                const p = document.createElement('span');
+                p.classList.add('particula');
+                p.innerHTML = contenido;
+                
+                // Posición inicial (donde está el mouse o el centro)
+                const rect = container.getBoundingClientRect();
+                p.style.left = (e.clientX - rect.left) + 'px';
+                p.style.top = (e.clientY - rect.top) + 'px';
+
+                // Dirección aleatoria de salida
+                const x = (Math.random() - 0.5) * 400;
+                const y = (Math.random() - 0.5) * 400;
+                p.style.setProperty('--x', `${x}px`);
+                p.style.setProperty('--y', `${y}px`);
+
+                // Color aleatorio para globos (opcional)
+                if(contenido === '🎈') {
+                    const colores = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff'];
+                    p.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+                }
+
+                container.appendChild(p);
+
+                // Limpiar el DOM después de la animación
+                setTimeout(() => { p.remove(); }, 1500);
+            }
+        }
+
+        // Eventos para cada tipo de imagen
+        document.querySelector('.efecto-payaso').addEventListener('mousemove', (e) => {
+            if(Math.random() > 0.9) crearParticula(e, '🎈');
+        });
+
+        document.querySelector('.efecto-brujas').addEventListener('mousemove', (e) => {
+            if(Math.random() > 0.9) crearParticula(e, '⛧');
+        });
+
+        document.querySelector('.efecto-llorona').addEventListener('mousemove', (e) => {
+            if(Math.random() > 0.9) crearParticula(e, '💧');
+        });
+    </script>
+
+</body>
+</html>

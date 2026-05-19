@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Payaso de la Madero | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--gris);
+            min-height: 100vh;
+            border-left: 1px solid #333;
+            border-right: 1px solid #333;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+        }
+
+        .img-full {
+            width: 100%;
+            height: 400px;
+            background: url('payaso.jpg') center/cover;
+            border-bottom: 5px solid var(--rojo);
+            margin-bottom: 30px;
+            filter: grayscale(30%) contrast(1.2);
+        }
+
+        h1 {
+            font-family: 'Metal Mania';
+            color: var(--rojo);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .texto-relato {
+            line-height: 1.8;
+            font-size: 1.2rem;
+            text-align: justify;
+            color: #ccc;
+            white-space: pre-line;
+            padding: 0 10px;
+        }
+
+        .sello-advertencia {
+            border: 2px dashed var(--rojo);
+            color: var(--rojo);
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+            font-weight: bold;
+            background: rgba(255, 0, 0, 0.05);
+        }
+
+    
+        .nav-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid var(--rojo);
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 20px var(--rojo);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #444;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="img-full"></div>
+
+        <h1>EL PAYASO DE LA MADERO</h1>
+        <p class="subtitulo">Expediente: NL-882-TP</p>
+
+        <div class="texto-relato">
+            En las oscuras y solitarias calles de la colonia Madero, en Nuevo Laredo, Tamaulipas, circula una historia que hace que incluso los más valientes apresuren el paso al caer la noche. Se trata del "Payaso de la Madero".
+
+            Cuenta la leyenda que todo comenzó con un hombre que trabajaba en un circo local. Tras una serie de eventos trágicos y humillaciones, el hombre perdió la vida cerca de los jardines de esta colonia señorial. Sin embargo, su espíritu nunca abandonó el lugar.
+
+            Testigos aseguran que, después de la medianoche, se puede ver una figura alta vestida con un traje de payaso antiguo y descolorido, parada inmóvil bajo la luz amarillenta de los postes. Lo más aterrador no es solo su presencia, sino su comportamiento: se dice que si lo miras fijamente, empezará a acercarse a ti sin mover las piernas, como si flotara, mientras el sonido de una risa grabada y distorsionada llena el aire.
+
+            Muchos vecinos evitan pasar por la calle San Antonio a altas horas, pues dicen que el payaso sigue esperando a alguien que quiera "jugar" con él para siempre.
+        </div>
+
+        <div class="sello-advertencia">
+            ADVERTENCIA: No se recomienda transitar por la zona de la Colonia Madero entre las 03:00 AM y las 04:00 AM.
+        </div>
+
+        <div class="nav-btns">
+            <a href="index.html" class="btn">Inicio</a>
+            <a href="articulos.html" class="btn">Volver a Archivos</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Voces Ancestrales | Registro de Fenómenos Urbanos
+        </footer>
+    </div>
+
+</body>
+</html>

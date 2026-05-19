@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Callejón del Beso | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.93)), url('https://www.transparenttextures.com/patterns/brick-wall-dark.png');
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--gris);
+            min-height: 100vh;
+            border-left: 1px solid #331111;
+            border-right: 1px solid #331111;
+        }
+
+     
+        .img-full {
+            width: 100%;
+            height: 450px;
+            background: url('cabe.jpg') center/cover;
+            border-bottom: 5px solid #600;
+            margin-bottom: 30px;
+            filter: grayscale(20%) sepia(0.2);
+        }
+
+        h1 {
+            font-family: 'Metal Mania';
+            color: var(--rojo);
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #833;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        .texto-relato {
+            line-height: 1.9;
+            font-size: 1.25rem;
+            text-align: justify;
+            color: #ccc;
+            white-space: pre-line;
+            padding: 0 20px;
+        }
+
+        .maldicion-box {
+            margin: 40px 0;
+            padding: 30px;
+            border: 1px double var(--rojo);
+            background: rgba(255, 0, 0, 0.03);
+            text-align: center;
+        }
+
+        .maldicion-box h4 {
+            color: var(--rojo);
+            font-family: 'Metal Mania';
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .maldicion-box p {
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .nav-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid var(--rojo);
+            padding: 12px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #333;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="img-full"></div>
+
+        <h1>EL CALLEJÓN DEL BESO</h1>
+        <p class="subtitulo">Amor, Sangre y Destino en Guanajuato</p>
+
+        <div class="texto-relato">
+            En la ciudad de Guanajuato existe un callejón tan estrecho que los balcones de las casas casi se tocan. Aquí nació la historia de Doña Ana y Don Carlos, un amor prohibido que desafió la autoridad de un padre violento.
+
+            Ana era la hija única de un hombre intransigente que quería casarla con un rico noble español. Ella, en cambio, estaba enamorada de Carlos, un humilde minero. Al ser descubiertos, el padre de Ana la encerró, pero Carlos, desesperado, compró la casa de enfrente. Como los balcones estaban a solo unos centímetros, los amantes podían verse y tocarse las manos en la oscuridad de la noche.
+
+            Una noche, el padre entró a la habitación y encontró a los jóvenes besándose de balcón a balcón. Cegado por la ira, clavó una daga en el pecho de su propia hija mientras ella aún sostenía la mano de Carlos. Él, incapaz de soltarla, besó la mano de su amada mientras ella se enfriaba, antes de quitarse la vida poco después.
+        </div>
+
+        <div class="maldicion-box">
+            <h4>La Sentencia del Tercer Escalón</h4>
+            <p>"Aquellas parejas que visiten este lugar y no se besen parados en el tercer escalón del callejón, tendrán siete años de mala suerte en el amor. Pero quienes lo hagan, aseguran felicidad eterna."</p>
+        </div>
+
+        <div class="nav-btns">
+            <a href="index.html" class="btn">Inicio</a>
+            <a href="cat-mexico.html" class="btn">Volver a México</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Voces Ancestrales | Crónicas de Amor y Muerte.
+        </footer>
+    </div>
+
+</body>
+</html>
