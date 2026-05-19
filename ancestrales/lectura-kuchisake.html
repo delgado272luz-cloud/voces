@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuchisake-onna | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            line-height: 1.8;
+        }
+
+       
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+        .contenedor-lectura {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--gris);
+            border: 1px solid #222;
+        }
+
+        .header-relato { text-align: center; margin-bottom: 30px; }
+        .categoria-tag { color: var(--rojo); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: bold; }
+        
+        h1 {
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .img-relato-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .img-relato-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        .img-relato-box img:hover { filter: grayscale(0%); }
+
+        .cuerpo-texto {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .cuerpo-texto p { margin-bottom: 20px; }
+
+        .cita-destacada {
+            font-family: 'Metal Mania';
+            font-size: 1.6rem;
+            color: var(--rojo);
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
+        }
+
+      
+        .controles {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            color: var(--blanco);
+            text-decoration: none;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-volver:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-lectura">
+        <div class="header-relato">
+            <span class="categoria-tag">Japón | Leyendas del Mundo</span>
+            <h1>KUCHISAKE-ONNA</h1>
+        </div>
+
+        <div class="img-relato-box">
+            <img src="kuchisake.jpg" alt="La mujer de la boca cortada">
+        </div>
+
+        <div class="cuerpo-texto">
+            <p>La leyenda de Kuchisake-onna, o la "Mujer de la Boca Cortada", es una de las historias más aterradoras del folclore japonés. Se dice que aparece por las noches, especialmente en tardes nubladas o callejones solitarios, vistiendo un abrigo largo y cubriendo su rostro con una máscara quirúrgica, algo común en Japón para evitar enfermedades, lo que le permite ocultar su secreto hasta el último momento.</p>
+
+            <p>Cuando encuentra a una víctima, generalmente jóvenes o niños, les detiene y les hace una pregunta inquietante: <strong>"¿Soy hermosa?"</strong>. Si la persona responde que sí, ella se retira la máscara, revelando una boca cortada de oreja a oreja en una sonrisa macabra y sangrienta, para luego preguntar de nuevo: <strong>"¿Y ahora?"</strong>.</p>
+
+            <div class="cita-destacada">
+                "NO HAY RESPUESTA CORRECTA; SOLO UN DESTINO ESCRITO CON FILO DE TIJERAS."
+            </div>
+
+            <p>Si la víctima grita o dice que no, ella la asesina instantáneamente con unas enormes tijeras. Si vuelve a decir que sí, ella le cortará la boca de la misma manera para que "sea tan hermosa como ella". Según la tradición, la única forma de escapar es darle una respuesta ambigua como "eres normal" o lanzarle dulces de caramelo duro (bekko ame) para distraerla y poder huir.</p>
+
+            <p>El origen de este espíritu se remonta al período Heian, donde se dice que fue una mujer hermosa pero vanidosa que fue castigada por su esposo tras una infidelidad. Él le cortó la boca gritando: "¿Quién pensará que eres hermosa ahora?". Desde entonces, su espíritu vaga por el mundo moderno, alimentándose del miedo y la vanidad de quienes cruzan su camino.</p>
+        </div>
+
+        <div class="controles">
+            <a href="cat-mundo.html" class="btn-volver">← VOLVER A LEYENDAS</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Terror Oriental</p>
+    </footer>
+
+</body>
+</html>

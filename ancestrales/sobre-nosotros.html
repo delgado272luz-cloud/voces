@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el Proyecto | Voces Ancestrales</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo: #ff0000;
+            --negro: #080808;
+            --gris-claro: #cccccc;
+            --blanco: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                              url('https://images.unsplash.com/photo-1505635330303-31953027484d?q=80&w=1200');
+            background-size: cover;
+            background-attachment: fixed;
+            line-height: 1.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #000;
+            border-bottom: 4px solid var(--rojo);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2.2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 25px; }
+        .menu a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .menu a:hover { color: var(--rojo); }
+
+ 
+        .contenedor { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+
+        .sobre-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sobre-header h1 {
+            font-family: 'Metal Mania';
+            font-size: 4rem;
+            color: var(--rojo);
+            margin-bottom: 10px;
+        }
+
+        .cuadro-info {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 40px;
+            border-left: 5px solid var(--rojo);
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cuadro-info h2 {
+            font-family: 'Metal Mania';
+            font-size: 2rem;
+            color: var(--rojo);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+        }
+
+        .cuadro-info p {
+            font-size: 1.1rem;
+            color: var(--gris-claro);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .lista-enfoque {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .lista-enfoque li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .lista-enfoque li::before {
+            content: '💀';
+            position: absolute;
+            left: 0;
+            color: var(--rojo);
+        }
+
+        .btn-inicio {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-inicio:hover { background: var(--rojo); box-shadow: 0 0 20px var(--rojo); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            border-top: 1px solid #222;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+            <li><a href="sobre-nosotros.html">Sobre el Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor">
+        <header class="sobre-header">
+            <h1>EL MANIFIESTO</h1>
+            <p>NUESTRA RAZÓN DE EXISTIR</p>
+        </header>
+
+        <section class="cuadro-info">
+            <h2>NUESTRO ENFOQUE DIGITAL</h2>
+            <p>
+                <strong>Voces Ancestrales</strong> es un blog digital enfocado en la recopilación, narración y análisis de los mitos y leyendas que habitan en las diferentes regiones de México. No somos solo un sitio de cuentos; somos un archivo vivo de las diversas culturas y creencias que dan forma a nuestra identidad.
+            </p>
+            <p>
+                Desde relatos de brujería hasta historias que se han pasado a través de generaciones, nuestro objetivo es preservar las narraciones tradicionales que explican diversos orígenes y fenómenos sobrenaturales que la ciencia aún no puede descifrar.
+            </p>
+        </section>
+
+        <section class="cuadro-info">
+            <h2>¿QUÉ INVESTIGAMOS?</h2>
+            <p>Nos adentramos en lo desconocido para traerte:</p>
+            <ul class="lista-enfoque">
+                <li><strong>Narraciones de hechos reales:</strong> Sucesos documentados con testimonios difíciles de creer.</li>
+                <li><strong>Fenómenos Sobrenaturales:</strong> Análisis de eventos que desafían la lógica y las leyes físicas.</li>
+                <li><strong>Folklore Regional:</strong> Mitos específicos de pueblos y etnias que corren el riesgo de ser olvidados.</li>
+                <li><strong>Crónicas de Brujería:</strong> El estudio de las artes ocultas y su impacto en la sociedad antigua y moderna.</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="btn-inicio">← VOLVER AL INICIO</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | "Lo que la ciencia calla, la leyenda lo cuenta."</p>
+    </footer>
+
+</body>
+</html>

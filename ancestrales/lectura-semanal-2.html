@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Relato de Elena | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #121212; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            line-height: 1.8;
+        }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .menu { display: flex; list-style: none; gap: 20px; }
+        .menu a { color: white; text-decoration: none; text-transform: uppercase; font-weight: bold; font-size: 0.9rem; }
+        .menu a:hover { color: var(--rojo); }
+
+        .contenedor-lectura {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--gris);
+            border: 1px solid #222;
+        }
+
+        .header-relato { text-align: center; margin-bottom: 30px; }
+        .categoria-tag { color: var(--rojo); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: bold; }
+        
+        h1 {
+            font-family: 'Metal Mania';
+            font-size: 3.5rem;
+            color: var(--rojo);
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .img-relato-box {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .img-relato-box img {
+            width: 100%;
+            display: block;
+            filter: grayscale(40%);
+            transition: 0.5s;
+        }
+
+        .img-relato-box img:hover { filter: grayscale(0%); }
+
+        .cuerpo-texto {
+            font-size: 1.1rem;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        .cuerpo-texto p { margin-bottom: 20px; }
+
+        .cita-destacada {
+            font-family: 'Metal Mania';
+            font-size: 1.6rem;
+            color: var(--rojo);
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
+        }
+
+     
+        .controles {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            color: var(--blanco);
+            text-decoration: none;
+            border: 1px solid var(--rojo);
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-volver:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 15px var(--rojo);
+        }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="articulos.html">Artículos</a></li>
+            <li><a href="aportaciones.html">Aportaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-lectura">
+        <div class="header-relato">
+            <span class="categoria-tag">Relato de la Semana | Aportación</span>
+            <h1>ELENA</h1>
+        </div>
+
+        <div class="img-relato-box">
+            <img src="elena.jpg" alt="Relato de Elena">
+        </div>
+
+        <div class="cuerpo-texto">
+            <p>Elena nos comparte una historia que ha pasado de generación en generación en su familia. Todo comenzó en una antigua casona donde los espejos parecían retener sombras que no correspondían a los habitantes de la casa. Según nos cuenta, no se trataba de un espíritu agresivo, sino de una presencia constante que vigilaba desde las esquinas de los pasillos.</p>
+
+            <p>Lo más inquietante del relato de Elena es la descripción de "la mujer de blanco" que solía aparecer en el reflejo de las ventanas durante las noches de lluvia. Ella recuerda que, siendo niña, intentó hablar con la figura, pero solo recibió un susurro frío que mencionaba un nombre olvidado. Años más tarde, al investigar los cimientos de la propiedad, descubrieron que la casa había sido construida sobre un antiguo pozo que fue sellado apresuradamente.</p>
+
+            <div class="cita-destacada">
+                "HAY VÍNCULOS QUE NI LA MUERTE NI EL TIEMPO PUEDEN ROMPER; ELENA SOLO FUE EL TESTIGO DE UNA PROMESA PENDIENTE."
+            </div>
+
+            <p>Elena decidió compartir este relato para advertir a otros que, a veces, los ecos del pasado no buscan hacernos daño, sino simplemente ser reconocidos. Hoy en día, ella vive en una ciudad diferente, pero asegura que en las noches de tormenta, todavía puede sentir ese aroma a tierra húmeda y el frío sutil de un reflejo que no le pertenece.</p>
+        </div>
+
+        <div class="controles">
+            <a href="cat-semanales.html" class="btn-volver">← VOLVER A SEMANALES</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Voces Ancestrales | Historias de la Comunidad</p>
+    </footer>
+
+</body>
+</html>

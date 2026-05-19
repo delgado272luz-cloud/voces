@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatos Semanales | Voces Ancestrales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Metal+Mania&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --rojo: #ff0000; --negro: #080808; --gris: #1a1a1a; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--negro); 
+            color: var(--blanco); 
+            font-family: 'Oswald', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/black-linen.png');
+            background-attachment: fixed;
+        }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: #000; border-bottom: 4px solid var(--rojo);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo { font-family: 'Permanent Marker', cursive; font-size: 2.2rem; text-decoration: none; color: white; }
+        .logo span { color: var(--rojo); }
+
+        .contenedor { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+
+        .header-semanal { text-align: center; margin-bottom: 50px; }
+        .header-semanal h1 { font-family: 'Metal Mania'; font-size: 3.5rem; color: var(--rojo); text-transform: uppercase; }
+        .header-semanal p { letter-spacing: 2px; color: #888; text-transform: uppercase; font-size: 0.9rem; }
+
+       
+        .testimonio-card {
+            background: var(--gris);
+            border-left: 5px solid var(--rojo);
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            transition: 0.4s;
+        }
+
+        .testimonio-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+            background: #222;
+        }
+
+        .user-info { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        
+        .user-avatar { 
+            width: 55px; height: 55px; border-radius: 50%; 
+            border: 2px solid var(--rojo); background: #000; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 1.5rem; filter: drop-shadow(0 0 5px var(--rojo));
+        }
+        
+        .user-details h3 { color: var(--rojo); font-size: 1.4rem; font-family: 'Metal Mania'; letter-spacing: 1px; }
+        .user-details span { font-size: 0.8rem; color: #666; font-weight: bold; text-transform: uppercase; }
+
+        .relato-preview { 
+            font-style: italic; color: #ccc; line-height: 1.8; 
+            margin-bottom: 25px; border-left: 2px solid #444; 
+            padding-left: 20px; font-size: 1.05rem;
+        }
+
+        .btn-leer-completo {
+            text-decoration: none; color: var(--rojo); font-weight: bold; 
+            text-transform: uppercase; font-size: 0.9rem; transition: 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-leer-completo:hover { color: white; letter-spacing: 2px; }
+
+
+        .banner-enviar {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            border: 2px dashed var(--rojo);
+            padding: 50px; text-align: center; margin-top: 60px;
+            transition: 0.3s;
+        }
+
+        .banner-enviar h2 { font-family: 'Metal Mania'; font-size: 2.5rem; color: white; margin-bottom: 10px; }
+        .banner-enviar p { color: #888; margin-bottom: 25px; }
+
+        .btn-enviar {
+            display: inline-block; padding: 15px 40px;
+            background: var(--rojo); color: white; text-decoration: none;
+            font-weight: bold; border-radius: 0px; transition: 0.3s;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .btn-enviar:hover { 
+            background: white; color: var(--rojo);
+            box-shadow: 0 0 30px var(--rojo);
+        }
+
+        .volver-inicio {
+            display: inline-block; margin-top: 40px; color: #555; 
+            text-decoration: none; font-size: 0.9rem; transition: 0.3s;
+        }
+        
+        .volver-inicio:hover { color: var(--rojo); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #222; margin-top: 50px; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+    </nav>
+
+    <div class="contenedor">
+        <header class="header-semanal">
+            <h1>RELATOS DE LA COMUNIDAD</h1>
+            <p>Historias reales enviadas por nuestros seguidores</p>
+        </header>
+
+        <article class="testimonio-card">
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <h3>Anónimo desde Oaxaca</h3>
+                    <span>Publicado: Hace 2 días</span>
+                </div>
+            </div>
+            <div class="relato-preview">
+                "Eran las 3 de la mañana cuando escuché que alguien rascaba la puerta de mi cuarto. Pensé que era mi perro, pero luego recordé que él duerme afuera..."
+            </div>
+            <a href="lectura-semanal-1.html" class="btn-leer-completo">LEER TESTIMONIO COMPLETO →</a>
+        </article>
+
+        <article class="testimonio-card">
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <h3>Elena M.</h3>
+                    <span>Publicado: Hace 1 semana</span>
+                </div>
+            </div>
+            <div class="relato-preview">
+                "En la carretera hacia Naica, vi una luz roja que nos siguió por más de 10 kilómetros. No era un auto, no era un avión, se movía como si estuviera viva..."
+            </div>
+            <a href="lectura-semanal-2.html" class="btn-leer-completo">LEER TESTIMONIO COMPLETO →</a>
+        </article>
+
+        <section class="banner-enviar">
+            <h2>¿TE HA PASADO ALGO INEXPLICABLE?</h2>
+            <p>No te guardes el secreto. Tu historia podría ser la siguiente en aparecer aquí.</p>
+            <a href="aportaciones.html" class="btn-enviar">ENVIAR MI RELATO</a>
+        </section>
+
+        <center>
+            <a href="index.html" class="volver-inicio">← VOLVER AL PORTAL PRINCIPAL</a>
+        </center>
+    </div>
+
+    <footer>
+        &copy; 2026 Voces Ancestrales | Archivo de Testimonios Comunitarios.
+    </footer>
+
+</body>
+</html>
