@@ -23,10 +23,10 @@
             font-family: 'Oswald', sans-serif;
             background-image: radial-gradient(circle, #220000 0%, #080808 100%);
             min-height: 100vh;
-            overflow-x: hidden; /* Evita scroll horizontal */
-            position: relative;
+            overflow-x: hidden; /* Evita scroll lateral por el humo */
         }
 
+        /* --- NAVEGACIÓN --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -35,13 +35,13 @@
             background: #000;
             border-bottom: 3px solid var(--rojo);
             position: relative;
-            z-index: 1000;
+            z-index: 10;
         }
 
         .logo { font-family: 'Permanent Marker', cursive; font-size: 1.8rem; text-decoration: none; color: white; }
         .logo span { color: var(--rojo); }
 
-        /* EL CONTENEDOR ORIGINAL */
+        /* --- FORMULARIO --- */
         .contenedor-form {
             max-width: 700px;
             margin: 50px auto;
@@ -50,10 +50,10 @@
             border: 1px solid #333;
             position: relative;
             box-shadow: 0 0 30px rgba(0,0,0,1);
-            z-index: 500; /* Asegura estar sobre la niebla */
+            z-index: 5; /* Asegura que el cuadro esté sobre el humo */
         }
 
-        /* EL SELLO TOP SECRET ORIGINAL */
+        /* Efecto decorativo de "Expediente" */
         .contenedor-form::before {
             content: "TOP SECRET";
             position: absolute;
@@ -66,7 +66,6 @@
             transform: rotate(15deg);
             opacity: 0.5;
             font-size: 1.2rem;
-            pointer-events: none;
         }
 
         h1 {
@@ -144,39 +143,40 @@
             padding-top: 20px;
         }
 
-        /* --- NIEBLA EQUILIBRADA (No traba el sitio) --- */
-        #capa-niebla {
+        /* --- ESTILOS DEL HUMO --- */
+        .smoke-container {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 1;
         }
 
-        .particula-humo {
+        .smoke-particle {
             position: absolute;
             background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
             border-radius: 50%;
-            filter: blur(45px);
+            filter: blur(50px);
             opacity: 0;
-            animation: movimientoHumo var(--duracion) infinite ease-in-out;
-            will-change: transform, opacity;
+            animation: moveSmoke linear infinite;
         }
 
-        @keyframes movimientoHumo {
+        @keyframes moveSmoke {
             0% { transform: translate(0, 0) scale(1); opacity: 0; }
-            20% { opacity: 0.4; }
-            80% { opacity: 0.4; }
-            100% { transform: translate(var(--mov-x), var(--mov-y)) scale(1.5); opacity: 0; }
+            20% { opacity: 0.5; }
+            80% { opacity: 0.5; }
+            100% { transform: translate(var(--x), var(--y)) scale(2); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div id="capa-niebla"></div>
+    <div class="smoke-container" id="smoke"></div>
 
     <nav>
-        <a href="index.html" class="logo">VOCES <span>ANCESTRALES</span></a>
+        <a class="logo" href="/">VOCES <span>ANCESTRALES</span></a>
     </nav>
 
     <div class="contenedor-form">
@@ -218,27 +218,33 @@
     </div>
 
     <script>
-        const capa = document.getElementById('capa-niebla');
-        const cantidadParticulas = 20; 
+        const container = document.getElementById('smoke');
+        const particleCount = 30; // Cantidad de nubes
 
-        for (let i = 0; i < cantidadParticulas; i++) {
-            const humo = document.createElement('div');
-            humo.className = 'particula-humo';
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'smoke-particle';
             
-            const tamaño = Math.random() * 500 + 400;
-            humo.style.width = tamaño + 'px';
-            humo.style.height = tamaño + 'px';
+            // Tamaños aleatorios grandes
+            const size = Math.random() * 400 + 300;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
             
-            humo.style.left = Math.random() * 100 + 'vw';
-            humo.style.top = Math.random() * 100 + 'vh';
+            // Posición inicial aleatoria
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
             
-            humo.style.setProperty('--duracion', Math.random() * 15 + 15 + 's');
-            humo.style.setProperty('--mov-x', (Math.random() * 200 - 100) + 'px');
-            humo.style.setProperty('--mov-y', (Math.random() * -150 - 50) + 'px');
+            // Variables para el movimiento en JS
+            const moveX = (Math.random() - 0.5) * 400;
+            const moveY = (Math.random() - 0.5) * 400;
+            particle.style.setProperty('--x', `${moveX}px`);
+            particle.style.setProperty('--y', `${moveY}px`);
             
-            humo.style.animationDelay = Math.random() * 10 + 's';
+            // Tiempo y retraso aleatorio
+            particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
+            particle.style.animationDelay = `${Math.random() * 10}s`;
 
-            capa.appendChild(humo);
+            container.appendChild(particle);
         }
     </script>
 </body>
