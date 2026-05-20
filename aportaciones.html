@@ -203,17 +203,17 @@
         function crearHumo(elemento) {
             const contenedor = elemento.parentElement;
             
-            // Creamos 2 partículas de humo por cada letra escrita
+        
             for(let i = 0; i < 2; i++) {
                 const humo = document.createElement('div');
                 humo.className = 'humo-letra';
                 
-                // Tamaño pequeño inicial
+           
                 const tam = Math.random() * 20 + 10;
                 humo.style.width = tam + 'px';
                 humo.style.height = tam + 'px';
                 
-                // Aparece cerca de donde se escribe (aleatorio dentro del input)
+   
                 const x = Math.random() * elemento.offsetWidth;
                 const y = Math.random() * elemento.offsetHeight;
                 
@@ -222,7 +222,7 @@
                 
                 contenedor.appendChild(humo);
                 
-                // Se borra solo para no gastar memoria
+                
                 setTimeout(() => {
                     humo.remove();
                 }, 1500);
