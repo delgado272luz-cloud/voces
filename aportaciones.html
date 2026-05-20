@@ -142,7 +142,7 @@
             padding-top: 20px;
         }
 
-  
+        /* ESTILOS PARA EL HUMO/NIEBLA */
         .particula-humo {
             position: fixed;
             background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(100,100,100,0.05) 40%, transparent 70%);
@@ -209,24 +209,25 @@
 
     <script>
         function crearNiebla() {
-            const numeroParticulas = 15; 
+            const numeroParticulas = 15; // Cantidad de nubes de humo
             
             for (let i = 0; i < numeroParticulas; i++) {
                 const humo = document.createElement('div');
                 humo.className = 'particula-humo';
                 
-
+                // Tamaño aleatorio para las nubes
                 const tamaño = Math.random() * 300 + 200;
                 humo.style.width = tamaño + 'px';
                 humo.style.height = tamaño + 'px';
                 
-
+                // Posición inicial aleatoria
                 humo.style.left = Math.random() * 100 + 'vw';
                 humo.style.top = Math.random() * 100 + 'vh';
                 
-
+                // Retraso aleatorio para que no salgan todas al mismo tiempo
                 humo.style.animationDelay = Math.random() * 15 + 's';
                 
+                // Velocidad aleatoria
                 humo.style.animationDuration = (Math.random() * 10 + 10) + 's';
 
                 document.body.appendChild(humo);
