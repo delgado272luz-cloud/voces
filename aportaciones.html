@@ -46,7 +46,6 @@
             border: 1px solid #333;
             position: relative;
             box-shadow: 0 0 30px rgba(0,0,0,1);
-            z-index: 10;
         }
 
         .contenedor-form::before {
@@ -80,7 +79,7 @@
             letter-spacing: 2px;
         }
 
-        .campo { margin-bottom: 25px; }
+        .campo { margin-bottom: 25px; position: relative; }
 
         label {
             display: block;
@@ -100,12 +99,13 @@
             font-family: 'Oswald';
             font-size: 1rem;
             transition: 0.3s;
+            position: relative;
+            z-index: 2;
         }
 
         input:focus, textarea:focus {
             outline: none;
             border-color: var(--rojo);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
         }
 
         .btn-enviar {
@@ -138,47 +138,47 @@
             padding-top: 20px;
         }
 
-        /* --- ESTILO DE LA PARTÍCULA DE HUMO --- */
-        .humo-tecla {
+        /* --- EFECTO HUMO EN LETRAS --- */
+        .humo-letra {
             position: absolute;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            border-radius: 50%;
             pointer-events: none;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(10px);
             z-index: 1;
-            filter: blur(15px);
-            animation: desvanecerHumo 1s ease-out forwards;
+            animation: vapor 1.5s ease-out forwards;
         }
 
-        @keyframes desvanecerHumo {
-            0% { transform: scale(0.5) translateY(0); opacity: 0.6; }
-            100% { transform: scale(2.5) translateY(-20px); opacity: 0; }
+        @keyframes vapor {
+            0% { transform: scale(1) translateY(0); opacity: 0.8; }
+            100% { transform: scale(4) translateY(-40px); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a class='logo' href='/'>VOCES <span>ANCESTRALES</span></a>
+        <a class='logo' href='index.html'>VOCES <span>ANCESTRALES</span></a>
     </nav>
 
-    <div class="contenedor-form" id="expediente">
+    <div class="contenedor-form">
         <h1>REPORTE DE SUCESOS</h1>
         <p class="instruccion">Documente su experiencia para el archivo</p>
 
         <form action="https://formspree.io/f/xgorzeej" method="POST">
             <div class="campo">
                 <label>Nombre del Informante (o Alias)</label>
-                <input type="text" name="nombre" placeholder="Ej: Agente X / Anónimo" required class="input-humo">
+                <input type="text" name="nombre" placeholder="Ej: Agente X / Anónimo" required oninput="crearHumo(this)">
             </div>
 
             <div class="campo">
                 <label>Correo de Contacto</label>
-                <input type="email" name="email" placeholder="su-correo@ejemplo.com" required class="input-humo">
+                <input type="email" name="email" placeholder="su-correo@ejemplo.com" required oninput="crearHumo(this)">
             </div>
 
             <div class="campo">
                 <label>Tipo de Fenómeno</label>
-                <select name="categoria" class="input-humo">
+                <select name="categoria" onchange="crearHumo(this)">
                     <option value="aparicion">Aparición Espectral</option>
                     <option value="leyenda">Leyenda Local</option>
                     <option value="criatura">Criatura no identificada</option>
@@ -188,7 +188,7 @@
 
             <div class="campo">
                 <label>Relato de los Hechos</label>
-                <textarea name="mensaje" rows="6" placeholder="Describa lugar, hora y lo que presenció..." required class="input-humo"></textarea>
+                <textarea name="mensaje" rows="6" placeholder="Describa lugar, hora y lo que presenció..." required oninput="crearHumo(this)"></textarea>
             </div>
 
             <button type="submit" class="btn-enviar">REGISTRAR EN EL ARCHIVO</button>
@@ -200,48 +200,34 @@
     </div>
 
     <script>
-        const expediente = document.getElementById('expediente');
-        const inputs = document.querySelectorAll('.input-humo');
-
-        function lanzarHumo() {
-            const humo = document.createElement('div');
-            humo.className = 'humo-tecla';
+        function crearHumo(elemento) {
+            const contenedor = elemento.parentElement;
             
-            // Tamaño aleatorio
-            const tam = Math.random() * 80 + 40;
-            humo.style.width = tam + 'px';
-            humo.style.height = tam + 'px';
-
-            // Aparece en posiciones aleatorias alrededor del cuadro
-            const lado = Math.floor(Math.random() * 4);
-            const rect = expediente.getBoundingClientRect();
-            
-            if(lado === 0) { // Arriba
-                humo.style.top = '-20px';
-                humo.style.left = Math.random() * rect.width + 'px';
-            } else if(lado === 1) { // Abajo
-                humo.style.top = rect.height + 'px';
-                humo.style.left = Math.random() * rect.width + 'px';
-            } else if(lado === 2) { // Izquierda
-                humo.style.left = '-20px';
-                humo.style.top = Math.random() * rect.height + 'px';
-            } else { // Derecha
-                humo.style.left = rect.width + 'px';
-                humo.style.top = Math.random() * rect.height + 'px';
+            // Creamos 2 partículas de humo por cada letra escrita
+            for(let i = 0; i < 2; i++) {
+                const humo = document.createElement('div');
+                humo.className = 'humo-letra';
+                
+                // Tamaño pequeño inicial
+                const tam = Math.random() * 20 + 10;
+                humo.style.width = tam + 'px';
+                humo.style.height = tam + 'px';
+                
+                // Aparece cerca de donde se escribe (aleatorio dentro del input)
+                const x = Math.random() * elemento.offsetWidth;
+                const y = Math.random() * elemento.offsetHeight;
+                
+                humo.style.left = x + 'px';
+                humo.style.top = y + 'px';
+                
+                contenedor.appendChild(humo);
+                
+                // Se borra solo para no gastar memoria
+                setTimeout(() => {
+                    humo.remove();
+                }, 1500);
             }
-
-            expediente.appendChild(humo);
-
-            // Eliminar después de la animación
-            setTimeout(() => {
-                humo.remove();
-            }, 1000);
         }
-
-        // Escuchar cuando el usuario escribe
-        inputs.forEach(input => {
-            input.addEventListener('input', lanzarHumo);
-        });
     </script>
 </body>
 </html>
