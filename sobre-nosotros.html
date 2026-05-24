@@ -210,24 +210,24 @@
 
             subtitulos.forEach(subtitulo => {
                 const textoOriginal = subtitulo.textContent;
-                subtitulo.textContent = ""; // Vaciamos el título para reconstruirlo con letras separadas
-                subtitulo.classList.add("volando"); // Iniciamos en estado "volando"
+                subtitulo.textContent = ""; 
+                subtitulo.classList.add("volando"); 
 
                
                 for (let i = 0; i < textoOriginal.length; i++) {
                     const letra = document.createElement("span");
                     
                     if (textoOriginal[i] === " ") {
-                        letra.innerHTML = "&nbsp;"; // Mantiene el espacio en blanco de HTML
+                        letra.innerHTML = "&nbsp;"; 
                         letra.classList.add("espacio");
                     } else {
                         letra.textContent = textoOriginal[i];
                     }
 
                    
-                    const randomX = Math.floor(Math.random() * 300) - 150 + "px"; // Entre -150px y 150px
-                    const randomY = Math.floor(Math.random() * 200) - 100 + "px"; // Entre -100px y 100px
-                    const randomZ = Math.floor(Math.random() * 400) - 200 + "px"; // Profundidad
+                    const randomX = Math.floor(Math.random() * 300) - 150 + "px"; 
+                    const randomY = Math.floor(Math.random() * 200) - 100 + "px"; 
+                    const randomZ = Math.floor(Math.random() * 400) - 200 + "px"; 
                     const randomRotateX = Math.floor(Math.random() * 360) - 180 + "deg";
                     const randomRotateY = Math.floor(Math.random() * 360) - 180 + "deg";
 
@@ -249,13 +249,13 @@
             const observador = new IntersectionObserver((entradas) => {
                 entradas.forEach(entrada => {
                     if (entrada.isIntersecting) {
-                        // Cambiamos la clase para que las letras vuelen a su posición real
+                       
                         entrada.target.classList.remove("volando");
                         entrada.target.classList.add("acomodadas");
                     }
                 });
             }, {
-                threshold: 0.3 // Se activa cuando se ve al menos el 30% del título
+                threshold: 0.3
             });
 
        
